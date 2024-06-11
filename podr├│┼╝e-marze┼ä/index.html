@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendarz Lotów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Podróże Marzeń</h1>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Strona Główna</a></li>
+            <li><a href="#destinations" onclick="showSection('destinations')">Destynacje</a></li>
+            <li><a href="#tips" onclick="showSection('tips')">Porady</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Kontakt</a></li>
+            <li><a href="#flights" onclick="showSection('flights')">Kalendarz Lotów</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Witamy na stronie Podróże Marzeń</h2>
+    <p>Jesteśmy firmą zajmującą się organizowaniem niezapomnianych podróży. Nasze doświadczenie i pasja sprawiają, że każda podróż z nami jest wyjątkowa. Zapewniamy kompleksową obsługę i dbamy o każdy detal, aby Twoja podróż była niezapomniana.</p>
+</section>
+
+<section id="destinations" style="display: none;">
+    <h2>Najlepsze destynacje</h2>
+    <div id="destinationButtonsContainer"></div>
+</section>
+
+<section id="tips" style="display: none;">
+    <h2>Porady Podróżnicze</h2>
+    <p>Dowiedz się, jak zaplanować idealną podróż, co zabrać i na co zwrócić uwagę.</p>
+</section>
+
+<footer id="contact" style="display: none;">
+    <h2>Kontakt</h2>
+    <p>Email: kontakt@podrozemarzen.pl</p>
+    <p>Telefon: +48 123 456 789</p>
+</footer>
+
+<section id="flights" style="display: none;">
+    <h2>Kalendarz Lotów</h2>
+    <div class="calendarContainer">
+        <div class="calendarSection">
+            <h3>Kalendarz Odlotów</h3>
+            <input type="date" id="departureDate" onchange="selectDepartureDate()">
+        </div>
+        <div class="calendarSection">
+            <h3>Kalendarz Przylotów</h3>
+            <input type="date" id="arrivalDate" onchange="selectArrivalDate()">
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
